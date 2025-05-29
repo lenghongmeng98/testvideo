@@ -20,7 +20,7 @@ export default function Page() {
   
   // Connection state management
   const [token, setToken] = useState('');
-  const [serverUrl, setServerUrl] = useState('');
+//   const [serverUrl, setServerUrl] = useState('');
   const [isConnected, setIsConnected] = useState(false);
   const [error, setError] = useState(null);
   const [isConnecting, setIsConnecting] = useState(false);
@@ -104,7 +104,7 @@ export default function Page() {
         }
         
         setToken(data.token);
-        setServerUrl(data.serverUrl);
+        // setServerUrl(data.serverUrl);
         
         // Connect to room using the serverUrl from the API response
         await roomInstance.connect(data.serverUrl, data.token);
@@ -141,7 +141,7 @@ export default function Page() {
     setIsConnected(false);
     setIsFormSubmitted(false);
     setToken('');
-    setServerUrl('');
+    // setServerUrl('');
     setError(null);
     setIsConnecting(false);
   };
